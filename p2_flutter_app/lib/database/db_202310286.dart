@@ -39,5 +39,37 @@ class DatabaseHelper {
       )
     ''');
   }
+  // INSERIR
+  Future<int> inserirTarefa(Tarefa tarefa) async {
+    final db = await database;
+    return await db.insert('tarefas', tarefa.toMap());
+  }
 
+  // LISTAR
+  Future<List<Tarefa>> listarTarefas() async {
+    final db = await database;
+    final maps = await db.query('tarefas', orderBy: 'id DESC');
+    return maps.map((map) => Tarefa.fromMap(map)).toList();
+  }
+
+  // ATUALIZAR
+  Future<int> atualizarTarefa(Tarefa tarefa) async {
+    final db = await database;
+    return await db.update(
+      'tarefas',
+      tarefa.toMap(),
+      where: 'id = ?',
+      whereArgs: [tarefa.id],
+    );
+  }
+
+  // DELETAR
+  Future<int> deletarTarefa(int id) async {
+    final db = await database;
+    return await db.delete(
+      'tarefas',
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+  }
 }
