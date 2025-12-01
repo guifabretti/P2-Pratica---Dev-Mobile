@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class Tarefa {
   int? id;
   String titulo;
@@ -16,7 +18,7 @@ class Tarefa {
   });
 
   Map<String, dynamic> toMap() {
-    return {
+    final json = {
       'id': id,
       'titulo': titulo,
       'descricao': descricao,
@@ -24,6 +26,10 @@ class Tarefa {
       'criadoEm': criadoEm,
       'indiceRelevancia': indiceRelevancia,
     };
+
+    print("🔎 JSON gerado da Tarefa: $json");
+
+    return json;
   }
 
   factory Tarefa.fromMap(Map<String, dynamic> map) {

@@ -17,10 +17,8 @@ class DatabaseHelper {
   }
 
   Future<Database> _initDatabase() async {
-    // Diretório padrão usando path_provider
     final Directory dir = await getApplicationDocumentsDirectory();
 
-    // Caminho completo do arquivo .db usando join() do pacote path
     final String path = join(dir.path, 'tarefas_202310286.db');
 
     return await openDatabase(
@@ -45,6 +43,8 @@ class DatabaseHelper {
   // INSERIR
   Future<int> inserirTarefa(Tarefa tarefa) async {
     final db = await database;
+    print("🔔 Tarefa sendo salva no BD:");
+    print(tarefa.toMap());
     return await db.insert('tarefas', tarefa.toMap());
   }
 

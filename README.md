@@ -2,11 +2,11 @@
 
 ## 1. Descrição do Projeto
 
-Este projeto consiste em um **mini sistema de cadastro de tarefas** desenvolvido em **Flutter** utilizando **SQLite** como banco de dados local. Para os campos personalizados e customizações, utilizamos o do Guilherme Fabretti, ou seja:
+Este projeto consiste em um **mini sistema de cadastro de tarefas** desenvolvido em **Flutter** utilizando **SQLite** como banco de dados. Para os campos personalizados e customizações, utilizamos o RA do aluno Guilherme Fabretti, ou seja:
 
 * Campo personalizado: `indiceRelevancia`
 * Banco de dados com o RA: `tarefas_202310286.db`
-* Tema personalizado: `lightGreen e greenAccent`
+* Tema personalizado: `lightGreen` e `greenAccent`
 
 ---
 
@@ -27,79 +27,16 @@ Este projeto consiste em um **mini sistema de cadastro de tarefas** desenvolvido
 
 ---
 
-## 4. Como acessar o banco de dados SQLite do app
+## 4. Vídeo do App
 
-### Passo a passo usando ADB (Android Emulator)
-
-1. **Listar dispositivos/emuladores disponíveis**
-
-```bash
-adb devices
-```
-
-2. **Dar root no emulador**
-
-```bash
-adb -s <nome_dispositivo> root
-```
-
-3. **Acessar o shell do emulador**
-
-```bash
-adb -s <nome_dispositivo> shell
-```
-
-4. **Navegar até a pasta do app**
-
-```bash
-cd /data/data/<package_name>/app_flutter
-```
-
-Exemplo:
-
-```bash
-cd /data/data/com.example.p2_flutter_app/app_flutter
-```
-
-5. **Listar arquivos na pasta**
-
-```bash
-ls
-```
-
-* Procure pelo arquivo `.db`, ex.: `tarefas_202310286.db`.
-
-6. **Sair do shell**
-
-```bash
-exit
-```
-
-7. **Exportar (pull) o banco para o PC**
-
-```bash
-adb -s <nome_dispositivo> pull /data/data/<package_name>/app_flutter/<nome_arquivo>.db .
-```
-
-Exemplo:
-
-```bash
-adb -s emulator-5554 pull /data/data/com.example.p2_flutter_app/app_flutter/tarefas_202310286.db .
-```
-
-8. **Abrir no DB Browser**
-
-* Usar o **DB Browser for SQLite** ou plugin VS Code para visualizar os dados.
+<video controls src="Prints e Video/Reunião em General-20251201_193238-Gravação de Reunião.mp4" title="Apresentação"></video>
 
 ---
 
-## 5. Vídeo do App
+## 5. Prints obrigatórios
 
-video aqui
-
----
-
-## 6. Prints obrigatórios
-
-prints aqui
+<img src="Prints e Video/Telas/image.png" alt="alt text" width="200"/>
+<img src="Prints e Video/Telas/image2.png" alt="alt text" width="200"/>
+<img src="Prints e Video/Telas/image3.png" alt="alt text" width="200" />
+<img src="Prints e Video/Telas/image4.png" alt="alt text" width="200" />
 
