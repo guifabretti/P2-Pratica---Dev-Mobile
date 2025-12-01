@@ -29,7 +29,7 @@ Este projeto consiste em um **mini sistema de cadastro de tarefas** desenvolvido
 
 ## 4. Vídeo do App
 
-<video controls src="Prints e Video/Reunião em General-20251201_193238-Gravação de Reunião.mp4" title="Apresentação"></video>
+https://github.com/user-attachments/assets/cd2e73f1-4069-4226-89ea-4e260e0fb42c
 
 ---
 
